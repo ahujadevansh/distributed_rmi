@@ -1,0 +1,9 @@
+#For master: 10.0.2.9
+
+#For Server Main: 10.0.2.15
+
+# For Secondary: 10.0.2.8
+
+# For Client: 10.0.2.7
+
+java -Djava.rmi.server.hostname=10.0.2.9 MasterServer

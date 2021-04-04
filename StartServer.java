@@ -12,7 +12,7 @@ public class StartServer {
 		try { 
 			// Create a object reference for the interface 
 			ServerInterface s = new ServerImplementation(); 
-            LoadBalancingInterface lb = (LoadBalancingInterface) Naming.lookup("rmi://localhost/LoadBalancing");
+            LoadBalancingInterface lb = (LoadBalancingInterface) Naming.lookup("rmi://10.0.2.9/LoadBalancing");
             System.out.println("4");
 			lb.register(s, this.name); 
 

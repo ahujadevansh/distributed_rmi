@@ -8,11 +8,11 @@ public class Client {
 
     public static void main(String args[]) throws RemoteException, MalformedURLException, NotBoundException{
 
-        LoadBalancingInterface lb = (LoadBalancingInterface) Naming.lookup("rmi://localhost/LoadBalancing");
+        LoadBalancingInterface lb = (LoadBalancingInterface) Naming.lookup("rmi://10.0.2.9/LoadBalancing");
 
         String serverName = lb.getActiveServer();
 
-        ServerInterface s = (ServerInterface) Naming.lookup("rmi://localhost/" + serverName);
+        ServerInterface s = (ServerInterface) Naming.lookup("rmi://10.0.2.9/" + serverName);
 
         System.out.println(s.add(9, 10000));
     }
